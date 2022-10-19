@@ -41,7 +41,7 @@ function sum(numbers) {
 
   for (let el of numbers) {
     if (typeof el === 'object') {
-      throw new Error('unsupported data type');
+      throw new Error("Unsupported data type sir or ma'am")
     }
 
     if (typeof el === 'string') {
