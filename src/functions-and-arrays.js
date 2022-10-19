@@ -30,11 +30,6 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-/**
- * 
- * @param {Array} numbers 
- * @returns 
- */
 function sum(numbers) {
   if (numbers.length === 0) {return 0;}
 
