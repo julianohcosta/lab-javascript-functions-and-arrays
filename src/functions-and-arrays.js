@@ -31,11 +31,8 @@ function sumNumbers(numbers) {
 
 // Iteration #3.1 Bonus:
 function sum(numbers) {
-  if (numbers.length === 0) {return 0;}
 
-  if (numbers.length === 1) {return numbers[0];}
-
-  if (numbers.every(el => el === 0)) {return 0;}
+  if (numbers.length === 0) return 0
 
   let sum = 0;
 
@@ -60,9 +57,7 @@ function sum(numbers) {
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbersAvg) {
-  if (numbersAvg.length === 0) {
-    return null;
-  }
+  if (numbersAvg.length === 0) return null
 
   return numbersAvg.reduce((a, b) => a + b, 0) / numbersAvg.length;
 }
@@ -72,19 +67,8 @@ function averageNumbers(numbersAvg) {
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(wordsArr) {
-  if (wordsArr.length === 0) {
-    return null;
-  } else if (wordsArr.length === 1) {
-    return wordsArr[0].length
-  }
-
-  let avg = 0;
-
-  wordsArr.forEach(w => {
-    avg += w.length;
-  });
-
-  return avg / wordsArr.length;
+  if (wordsArr.length === 0) return null
+  return wordsArr.reduce((acc, obj) => acc + obj.length, 0) / wordsArr.length;
 }
 
 // Bonus - Iteration #4.1
