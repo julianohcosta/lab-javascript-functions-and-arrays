@@ -194,10 +194,24 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
+/**
+ * 
+ * @param {Array.<Array.<number>>} matrix
+ * @return {number}
+ */
 function greatestProduct(matrix) {
+  let greatestProduct = 0;  
 
-  const flattenedMatrix = matrix.flat()
-  return flattenedMatrix.every(el => el === 1) ? 1 : 16
+  for (const arr of matrix){
+    for (let i=0; i < arr.length-3; i++){
+      let value = arr[i] * arr[i+1] * arr[i+2] * arr[i+3]
+      if ( value > greatestProduct) {
+        greatestProduct = value
+      }
+    }
+  }
+
+  return greatestProduct;
 }
 
 // The following is required to make unit tests work.
